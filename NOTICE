@@ -1,0 +1,11 @@
+WuYouLab.sh
+
+This project is a modified derivative of the open source project kejilion/sh,
+licensed under the Apache License, Version 2.0.
+
+Original project:
+https://github.com/kejilion/sh
+
+Modifications in this derivative include branding, script naming, repository
+links, documentation updates, and default telemetry setting changes for the
+WuYouLab distribution.
