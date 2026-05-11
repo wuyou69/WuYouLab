@@ -1331,9 +1331,9 @@ install_ldnmp() {
 
 	  fi
 
-	  if grep -q "kjlion/nginx:alpine" /home/web/docker-compose1.yml; then
-	  	sed -i 's|kjlion/nginx:alpine|nginx:alpine|g' /home/web/docker-compose.yml  > /dev/null 2>&1
-		sed -i 's|nginx:alpine|kjlion/nginx:alpine|g' /home/web/docker-compose.yml  > /dev/null 2>&1
+	  if grep -q "wuyou69/nginx:alpine" /home/web/docker-compose1.yml; then
+	  	sed -i 's|wuyou69/nginx:alpine|nginx:alpine|g' /home/web/docker-compose.yml  > /dev/null 2>&1
+		sed -i 's|nginx:alpine|wuyou69/nginx:alpine|g' /home/web/docker-compose.yml  > /dev/null 2>&1
 	  fi
 
 	  cd /home/web && docker compose up -d
@@ -1560,7 +1560,7 @@ nginx_upgrade() {
   local ldnmp_pods="nginx"
   cd /home/web/
   docker rm -f $ldnmp_pods > /dev/null 2>&1
-  docker images --filter=reference="kjlion/${ldnmp_pods}*" -q | xargs docker rmi > /dev/null 2>&1
+  docker images --filter=reference="wuyou69/${ldnmp_pods}*" -q | xargs docker rmi > /dev/null 2>&1
   docker images --filter=reference="${ldnmp_pods}*" -q | xargs docker rmi > /dev/null 2>&1
   docker compose up -d --force-recreate $ldnmp_pods
   crontab -l 2>/dev/null | grep -v 'logrotate' | crontab -
@@ -1690,7 +1690,7 @@ web_del() {
 nginx_waf() {
 	local mode=$1
 
-	if ! grep -q "kjlion/nginx:alpine" /home/web/docker-compose.yml; then
+	if ! grep -q "wuyou69/nginx:alpine" /home/web/docker-compose.yml; then
 		wget -O /home/web/nginx.conf "${gh_proxy}raw.githubusercontent.com/wuyou69/nginx/main/nginx10.conf"
 	fi
 
@@ -1711,10 +1711,10 @@ nginx_waf() {
 	fi
 
 	# Проверьте изображения Nginx и обрабатывайте их в соответствии с ситуацией
-	if grep -q "kjlion/nginx:alpine" /home/web/docker-compose.yml; then
+	if grep -q "wuyou69/nginx:alpine" /home/web/docker-compose.yml; then
 		docker exec nginx nginx -s reload
 	else
-		sed -i 's|nginx:alpine|kjlion/nginx:alpine|g' /home/web/docker-compose.yml
+		sed -i 's|nginx:alpine|wuyou69/nginx:alpine|g' /home/web/docker-compose.yml
 		nginx_upgrade
 	fi
 
@@ -7960,11 +7960,11 @@ linux_ldnmp() {
 			  local version=${version:-8.3}
 			  cd /home/web/
 			  cp /home/web/docker-compose.yml /home/web/docker-compose1.yml
-			  sed -i "s/kjlion\///g" /home/web/docker-compose.yml > /dev/null 2>&1
+			  sed -i "s/wuyou69\///g" /home/web/docker-compose.yml > /dev/null 2>&1
 			  sed -i "s/image: php:fpm-alpine/image: php:${version}-fpm-alpine/" /home/web/docker-compose.yml
 			  docker rm -f $ldnmp_pods
 			  docker images --filter=reference="$ldnmp_pods*" -q | xargs docker rmi > /dev/null 2>&1
-  			  docker images --filter=reference="kjlion/${ldnmp_pods}*" -q | xargs docker rmi > /dev/null 2>&1
+  			  docker images --filter=reference="wuyou69/${ldnmp_pods}*" -q | xargs docker rmi > /dev/null 2>&1
 			  docker compose up -d --force-recreate $ldnmp_pods
 			  docker exec php chown -R www-data:www-data /var/www/html
 

@@ -1369,9 +1369,9 @@ update_docker_compose_with_db_creds() {
 	sed -i "s#WuYouLab#$dbuse#g" /home/web/docker-compose.yml
   fi
 
-  if grep -q "kjlion/nginx:alpine" /home/web/docker-compose1.yml; then
-  	sed -i 's|kjlion/nginx:alpine|nginx:alpine|g' /home/web/docker-compose.yml  > /dev/null 2>&1
-	sed -i 's|nginx:alpine|kjlion/nginx:alpine|g' /home/web/docker-compose.yml  > /dev/null 2>&1
+  if grep -q "wuyou69/nginx:alpine" /home/web/docker-compose1.yml; then
+  	sed -i 's|wuyou69/nginx:alpine|nginx:alpine|g' /home/web/docker-compose.yml  > /dev/null 2>&1
+	sed -i 's|nginx:alpine|wuyou69/nginx:alpine|g' /home/web/docker-compose.yml  > /dev/null 2>&1
   fi
 
 }
@@ -1717,7 +1717,7 @@ nginx_upgrade() {
   local ldnmp_pods="nginx"
   cd /home/web/
   docker rm -f $ldnmp_pods > /dev/null 2>&1
-  docker images --filter=reference="kjlion/${ldnmp_pods}*" -q | xargs docker rmi > /dev/null 2>&1
+  docker images --filter=reference="wuyou69/${ldnmp_pods}*" -q | xargs docker rmi > /dev/null 2>&1
   docker images --filter=reference="${ldnmp_pods}*" -q | xargs docker rmi > /dev/null 2>&1
   docker compose up -d --force-recreate $ldnmp_pods
   crontab -l 2>/dev/null | grep -v 'logrotate' | crontab -
@@ -1841,7 +1841,7 @@ web_del() {
 nginx_waf() {
 	local mode=$1
 
-	if ! grep -q "kjlion/nginx:alpine" /home/web/docker-compose.yml; then
+	if ! grep -q "wuyou69/nginx:alpine" /home/web/docker-compose.yml; then
 		wget -O /home/web/nginx.conf "${gh_proxy}raw.githubusercontent.com/wuyou69/nginx/main/nginx10.conf"
 	fi
 
@@ -1862,10 +1862,10 @@ nginx_waf() {
 	fi
 
 	# 检查 nginx 镜像并根据情况处理
-	if grep -q "kjlion/nginx:alpine" /home/web/docker-compose.yml; then
+	if grep -q "wuyou69/nginx:alpine" /home/web/docker-compose.yml; then
 		docker exec nginx nginx -s reload
 	else
-		sed -i 's|nginx:alpine|kjlion/nginx:alpine|g' /home/web/docker-compose.yml
+		sed -i 's|nginx:alpine|wuyou69/nginx:alpine|g' /home/web/docker-compose.yml
 		nginx_upgrade
 	fi
 
@@ -1995,7 +1995,7 @@ nginx_br() {
 
 	local mode=$1
 
-	if ! grep -q "kjlion/nginx:alpine" /home/web/docker-compose.yml; then
+	if ! grep -q "wuyou69/nginx:alpine" /home/web/docker-compose.yml; then
 		wget -O /home/web/nginx.conf "${gh_proxy}raw.githubusercontent.com/wuyou69/nginx/main/nginx10.conf"
 	fi
 
@@ -2035,10 +2035,10 @@ nginx_br() {
 	fi
 
 	# 检查 nginx 镜像并根据情况处理
-	if grep -q "kjlion/nginx:alpine" /home/web/docker-compose.yml; then
+	if grep -q "wuyou69/nginx:alpine" /home/web/docker-compose.yml; then
 		docker exec nginx nginx -s reload
 	else
-		sed -i 's|nginx:alpine|kjlion/nginx:alpine|g' /home/web/docker-compose.yml
+		sed -i 's|nginx:alpine|wuyou69/nginx:alpine|g' /home/web/docker-compose.yml
 		nginx_upgrade
 	fi
 
@@ -2051,7 +2051,7 @@ nginx_zstd() {
 
 	local mode=$1
 
-	if ! grep -q "kjlion/nginx:alpine" /home/web/docker-compose.yml; then
+	if ! grep -q "wuyou69/nginx:alpine" /home/web/docker-compose.yml; then
 		wget -O /home/web/nginx.conf "${gh_proxy}raw.githubusercontent.com/wuyou69/nginx/main/nginx10.conf"
 	fi
 
@@ -2092,10 +2092,10 @@ nginx_zstd() {
 	fi
 
 	# 检查 nginx 镜像并根据情况处理
-	if grep -q "kjlion/nginx:alpine" /home/web/docker-compose.yml; then
+	if grep -q "wuyou69/nginx:alpine" /home/web/docker-compose.yml; then
 		docker exec nginx nginx -s reload
 	else
-		sed -i 's|nginx:alpine|kjlion/nginx:alpine|g' /home/web/docker-compose.yml
+		sed -i 's|nginx:alpine|wuyou69/nginx:alpine|g' /home/web/docker-compose.yml
 		nginx_upgrade
 	fi
 
@@ -4097,7 +4097,7 @@ donlond_frp() {
 	--restart=always \
 	--network host \
 	-v "$config_file":"/frp/${role}.toml" \
-	kjlion/frp:alpine \
+	wuyou69/frp:alpine \
 	"/frp/${role}" -c "/frp/${role}.toml"
 
 }
@@ -4399,7 +4399,7 @@ frps_panel() {
 			2)
 				crontab -l | grep -v 'frps' | crontab - > /dev/null 2>&1
 				tmux kill-session -t frps >/dev/null 2>&1
-				docker rm -f frps && docker rmi kjlion/frp:alpine >/dev/null 2>&1
+				docker rm -f frps && docker rmi wuyou69/frp:alpine >/dev/null 2>&1
 				[ -f /home/frp/frps.toml ] || cp /home/frp/frp_0.61.0_linux_amd64/frps.toml /home/frp/frps.toml
 				donlond_frp frps
 
@@ -4409,7 +4409,7 @@ frps_panel() {
 			3)
 				crontab -l | grep -v 'frps' | crontab - > /dev/null 2>&1
 				tmux kill-session -t frps >/dev/null 2>&1
-				docker rm -f frps && docker rmi kjlion/frp:alpine
+				docker rm -f frps && docker rmi wuyou69/frp:alpine
 				rm -rf /home/frp
 
 				close_port 8055 8056
@@ -4496,7 +4496,7 @@ frpc_panel() {
 			2)
 				crontab -l | grep -v 'frpc' | crontab - > /dev/null 2>&1
 				tmux kill-session -t frpc >/dev/null 2>&1
-				docker rm -f frpc && docker rmi kjlion/frp:alpine >/dev/null 2>&1
+				docker rm -f frpc && docker rmi wuyou69/frp:alpine >/dev/null 2>&1
 				[ -f /home/frp/frpc.toml ] || cp /home/frp/frp_0.61.0_linux_amd64/frpc.toml /home/frp/frpc.toml
 				donlond_frp frpc
 
@@ -4507,7 +4507,7 @@ frpc_panel() {
 			3)
 				crontab -l | grep -v 'frpc' | crontab - > /dev/null 2>&1
 				tmux kill-session -t frpc >/dev/null 2>&1
-				docker rm -f frpc && docker rmi kjlion/frp:alpine
+				docker rm -f frpc && docker rmi wuyou69/frp:alpine
 				rm -rf /home/frp
 				close_port 8055
 
@@ -9989,11 +9989,11 @@ linux_ldnmp() {
 			  local version=${version:-8.3}
 			  cd /home/web/
 			  cp /home/web/docker-compose.yml /home/web/docker-compose1.yml
-			  sed -i "s/kjlion\///g" /home/web/docker-compose.yml > /dev/null 2>&1
+			  sed -i "s/wuyou69\///g" /home/web/docker-compose.yml > /dev/null 2>&1
 			  sed -i "s/image: php:fpm-alpine/image: php:${version}-fpm-alpine/" /home/web/docker-compose.yml
 			  docker rm -f $ldnmp_pods
 			  docker images --filter=reference="$ldnmp_pods*" -q | xargs docker rmi > /dev/null 2>&1
-  			  docker images --filter=reference="kjlion/${ldnmp_pods}*" -q | xargs docker rmi > /dev/null 2>&1
+  			  docker images --filter=reference="wuyou69/${ldnmp_pods}*" -q | xargs docker rmi > /dev/null 2>&1
 			  docker compose up -d --force-recreate $ldnmp_pods
 			  docker exec php chown -R www-data:www-data /var/www/html
 
@@ -18793,7 +18793,7 @@ while true; do
 
 		local app_id="98"
 		local docker_name="wireguardc"
-		local docker_img="kjlion/wireguard:alpine"
+		local docker_img="wuyou69/wireguard:alpine"
 		local docker_port=51820
 
 		docker_rum() {
@@ -18839,7 +18839,7 @@ while true; do
 			  -v /home/docker/wireguard/config:/config \
 			  -v /lib/modules:/lib/modules:ro \
 			  --restart=always \
-			  kjlion/wireguard:alpine
+			  wuyou69/wireguard:alpine
 
 			sleep 3
 
