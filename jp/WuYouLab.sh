@@ -123,7 +123,7 @@ CheckFirstRun_false() {
 # ユーザーに規約への同意を求めるプロンプトを表示する
 UserLicenseAgreement() {
 	clear
-	echo -e "${gl_kjlan}テクノロジー ライオン スクリプト ツールボックスへようこそ${gl_bai}"
+	echo -e "${gl_kjlan}WuYouLab スクリプト ツールボックスへようこそ${gl_bai}"
 	echo "初めてスクリプトを使用する場合は、ユーザー使用許諾契約を読み、同意してください。"
 	echo "ユーザー使用許諾契約書: https://blog.wuyoulab.sh/user-license-agreement/"
 	echo -e "----------------------"
@@ -20150,7 +20150,7 @@ linux_Settings() {
 	  echo -e "${gl_kjlan}------------------------"
 	  echo -e "${gl_kjlan}61.  ${gl_bai}掲示板${gl_kjlan}66.  ${gl_bai}ワンストップのシステムチューニング${gl_huang}★${gl_bai}"
 	  echo -e "${gl_kjlan}99.  ${gl_bai}サーバーを再起動します${gl_kjlan}100. ${gl_bai}プライバシーとセキュリティ"
-	  echo -e "${gl_kjlan}101. ${gl_bai}k コマンドの高度な使用法${gl_huang}★${gl_bai}                    ${gl_kjlan}102. ${gl_bai}Tech Lion スクリプトをアンインストールする"
+	  echo -e "${gl_kjlan}101. ${gl_bai}k コマンドの高度な使用法${gl_huang}★${gl_bai}                    ${gl_kjlan}102. ${gl_bai}WuYouLab スクリプトをアンインストールする"
 	  echo -e "${gl_kjlan}------------------------"
 	  echo -e "${gl_kjlan}0.   ${gl_bai}メインメニューに戻る"
 	  echo -e "${gl_kjlan}------------------------${gl_bai}"
@@ -21071,7 +21071,7 @@ EOF
 		  61)
 			clear
 			send_stats "掲示板"
-			echo "Technology Lion の公式掲示板をご覧ください。脚本についてのアイデアがあれば、メッセージを残して交換してください。"
+			echo "WuYouLab の公式掲示板をご覧ください。脚本についてのアイデアがあれば、メッセージを残して交換してください。"
 			echo "https://board.wuyoulab.sh"
 			echo "公開パスワード: WuYouLab.sh"
 			  ;;
@@ -21222,8 +21222,8 @@ EOF
 
 		  102)
 			  clear
-			  send_stats "Tech Lion スクリプトをアンインストールする"
-			  echo "Tech Lion スクリプトをアンインストールする"
+			  send_stats "WuYouLab スクリプトをアンインストールする"
+			  echo "WuYouLab スクリプトをアンインストールする"
 			  echo "------------------------------------------------"
 			  echo "WuYouLab スクリプトは、他の機能に影響を与えることなく完全にアンインストールされます。"
 			  read -e -p "続行してもよろしいですか? (はい/いいえ):" choice
@@ -21521,7 +21521,7 @@ while true; do
 	  echo -e "${gl_kjlan}4.  ${gl_bai}バックアップクラスター${gl_kjlan}5.  ${gl_bai}クラスタを復元する"
 	  echo -e "${gl_kjlan}------------------------${gl_bai}"
 	  echo -e "${gl_kjlan}タスクをバッチで実行する${gl_bai}"
-	  echo -e "${gl_kjlan}11. ${gl_bai}テクノロジ ライオン スクリプトをインストールする${gl_kjlan}12. ${gl_bai}アップデートシステム${gl_kjlan}13. ${gl_bai}システムをクリーンアップする"
+	  echo -e "${gl_kjlan}11. ${gl_bai}WuYouLab スクリプトをインストールする${gl_kjlan}12. ${gl_bai}アップデートシステム${gl_kjlan}13. ${gl_bai}システムをクリーンアップする"
 	  echo -e "${gl_kjlan}14. ${gl_bai}ドッカーをインストールする${gl_kjlan}15. ${gl_bai}BBR3をインストールする${gl_kjlan}16. ${gl_bai}1Gの仮想メモリを設定する"
 	  echo -e "${gl_kjlan}17. ${gl_bai}タイムゾーンを上海に設定${gl_kjlan}18. ${gl_bai}すべてのポートを開く${gl_kjlan}51. ${gl_bai}カスタム命令"
 	  echo -e "${gl_kjlan}------------------------${gl_bai}"
@@ -21650,7 +21650,7 @@ echo -e "${gl_lan}GNAME 初年度 8.8 ドル COM ドメイン名 初年度 6.68 
 echo -e "${gl_bai}ウェブサイト: https://www.gname.com/register?tt=86836&ttcode=WUYOULAB86836&ttbj=sh${gl_bai}"
 echo "------------------------"
 echo ""
-echo -e "テクノロジーライオン周辺機器"
+echo -e "WuYouLab 周辺機器"
 echo "------------------------"
 echo -e "${gl_kjlan}ステーションB:${gl_bai}https://b23.tv/2mqnQyh              ${gl_kjlan}オイルパイプ：${gl_bai}https://www.youtube.com/@WuYouLab${gl_bai}"
 echo -e "${gl_kjlan}公式ウェブサイト:${gl_bai}https://wuyoulab.sh/              ${gl_kjlan}ナビゲーション:${gl_bai}https://dh.wuyoulab.sh/${gl_bai}"
@@ -21870,7 +21870,7 @@ cat <<'WUYOULAB_ASCII'
    \ V  V /| |_| |   | | (_) | |_| || |__| (_| | |_) |
     \_/\_/  \__,_|   |_|\___/ \__,_||_____\__,_|_.__/
 WUYOULAB_ASCII
-echo -e "テクノロジー ライオン スクリプト ツールボックス v$sh_v"
+echo -e "WuYouLab スクリプト ツールボックス v$sh_v"
 echo -e "コマンドライン入力${gl_huang}k${gl_kjlan}クイックスタートスクリプト${gl_bai}"
 echo -e "${gl_kjlan}------------------------${gl_bai}"
 echo -e "${gl_kjlan}1.   ${gl_bai}システム情報の問い合わせ"

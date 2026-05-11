@@ -1,5 +1,5 @@
 #!/bin/bash
-sh_v="3.9.3"
+sh_v="4.5.0"
 
 
 gl_hui='\e[37m'
@@ -114,7 +114,7 @@ CheckFirstRun_false() {
 # کاربر را وادار به موافقت با شرایط کنید
 UserLicenseAgreement() {
 	clear
-	echo -e "${gl_kjlan}به جعبه ابزار Tech Lion Script خوش آمدید${gl_bai}"
+	echo -e "${gl_kjlan}به جعبه ابزار WuYouLab Script خوش آمدید${gl_bai}"
 	echo "برای اولین بار با استفاده از اسکریپت ، لطفاً توافق نامه مجوز کاربر را بخوانید و موافقت کنید."
 	echo "توافق نامه مجوز کاربر: https://blog.wuyoulab.sh/user-license-agreement/"
 	echo -e "----------------------"
@@ -10858,7 +10858,7 @@ EOF
 
 				  case $host_dns in
 					  1)
-						  read -e -p "لطفاً یک فرمت جدید تجزیه و تحلیل را وارد کنید: 110.25.5.5.33 Kejilion.pro:" addhost
+						  read -e -p "لطفاً یک فرمت جدید تجزیه و تحلیل را وارد کنید: 110.25.5.5.33 wuyou69.top:" addhost
 						  echo "$addhost" >> /etc/hosts
 						  send_stats "تجزیه میزبان محلی اضافه شده است"
 
@@ -11179,7 +11179,7 @@ EOF
 		  41)
 			clear
 			send_stats "صفحه پیام"
-			echo "صفحه پیام Lion Technology به جامعه رسمی منتقل شده است! لطفاً پیامی را در جامعه رسمی بگذارید!"
+			echo "صفحه پیام WuYouLab به جامعه رسمی منتقل شده است! لطفاً پیامی را در جامعه رسمی بگذارید!"
 			echo "https://bbs.wuyoulab.sh/"
 			  ;;
 
@@ -11891,7 +11891,7 @@ cat <<'WUYOULAB_ASCII'
    \ V  V /| |_| |   | | (_) | |_| || |__| (_| | |_) |
     \_/\_/  \__,_|   |_|\___/ \__,_||_____\__,_|_.__/
 WUYOULAB_ASCII
-echo -e "جعبه ابزار Script Lion Technology V$sh_v"
+echo -e "جعبه ابزار Script WuYouLab V$sh_v"
 echo -e "ورودی خط فرمان${gl_huang}k${gl_kjlan}سریع اسکریپت ها را شروع کنید${gl_bai}"
 echo -e "${gl_kjlan}------------------------${gl_bai}"
 echo -e "${gl_kjlan}1.   ${gl_bai}پرس و جو اطلاعاتی سیستم"

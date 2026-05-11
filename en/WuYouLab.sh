@@ -123,7 +123,7 @@ CheckFirstRun_false() {
 # Prompt user to agree to terms
 UserLicenseAgreement() {
 	clear
-	echo -e "${gl_kjlan}Welcome to the technology lion script toolbox${gl_bai}"
+	echo -e "${gl_kjlan}Welcome to the WuYouLab script toolbox${gl_bai}"
 	echo "When using the script for the first time, please read and agree to the User License Agreement."
 	echo "User License Agreement: https://blog.wuyoulab.sh/user-license-agreement/"
 	echo -e "----------------------"
@@ -20150,7 +20150,7 @@ linux_Settings() {
 	  echo -e "${gl_kjlan}------------------------"
 	  echo -e "${gl_kjlan}61.  ${gl_bai}message board${gl_kjlan}66.  ${gl_bai}One-stop system tuning${gl_huang}★${gl_bai}"
 	  echo -e "${gl_kjlan}99.  ${gl_bai}Restart the server${gl_kjlan}100. ${gl_bai}Privacy and security"
-	  echo -e "${gl_kjlan}101. ${gl_bai}Advanced usage of k command${gl_huang}★${gl_bai}                    ${gl_kjlan}102. ${gl_bai}Uninstall tech lion script"
+	  echo -e "${gl_kjlan}101. ${gl_bai}Advanced usage of k command${gl_huang}★${gl_bai}                    ${gl_kjlan}102. ${gl_bai}Uninstall WuYouLab script"
 	  echo -e "${gl_kjlan}------------------------"
 	  echo -e "${gl_kjlan}0.   ${gl_bai}Return to main menu"
 	  echo -e "${gl_kjlan}------------------------${gl_bai}"
@@ -21071,7 +21071,7 @@ EOF
 		  61)
 			clear
 			send_stats "message board"
-			echo "Visit the official message board of Technology Lion. If you have any ideas about the script, please leave a message to exchange!"
+			echo "Visit the official message board of WuYouLab. If you have any ideas about the script, please leave a message to exchange!"
 			echo "https://board.wuyoulab.sh"
 			echo "Public password: WuYouLab.sh"
 			  ;;
@@ -21222,8 +21222,8 @@ EOF
 
 		  102)
 			  clear
-			  send_stats "Uninstall tech lion script"
-			  echo "Uninstall tech lion script"
+			  send_stats "Uninstall WuYouLab script"
+			  echo "Uninstall WuYouLab script"
 			  echo "------------------------------------------------"
 			  echo "The WuYouLab script will be completely uninstalled without affecting your other functions."
 			  read -e -p "Are you sure you want to continue? (Y/N):" choice
@@ -21521,7 +21521,7 @@ while true; do
 	  echo -e "${gl_kjlan}4.  ${gl_bai}Backup cluster${gl_kjlan}5.  ${gl_bai}Restore cluster"
 	  echo -e "${gl_kjlan}------------------------${gl_bai}"
 	  echo -e "${gl_kjlan}Execute tasks in batches${gl_bai}"
-	  echo -e "${gl_kjlan}11. ${gl_bai}Install technology lion script${gl_kjlan}12. ${gl_bai}Update system${gl_kjlan}13. ${gl_bai}Clean the system"
+	  echo -e "${gl_kjlan}11. ${gl_bai}Install WuYouLab script${gl_kjlan}12. ${gl_bai}Update system${gl_kjlan}13. ${gl_bai}Clean the system"
 	  echo -e "${gl_kjlan}14. ${gl_bai}Install docker${gl_kjlan}15. ${gl_bai}Install BBR3${gl_kjlan}16. ${gl_bai}Set 1G virtual memory"
 	  echo -e "${gl_kjlan}17. ${gl_bai}Set time zone to Shanghai${gl_kjlan}18. ${gl_bai}Open all ports${gl_kjlan}51. ${gl_bai}Custom instructions"
 	  echo -e "${gl_kjlan}------------------------${gl_bai}"
@@ -21650,7 +21650,7 @@ echo -e "${gl_lan}GNAME $8.8 first-year COM domain name $6.68 first-year CC doma
 echo -e "${gl_bai}Website: https://www.gname.com/register?tt=86836&ttcode=WUYOULAB86836&ttbj=sh${gl_bai}"
 echo "------------------------"
 echo ""
-echo -e "Technology lion peripherals"
+echo -e "WuYouLab peripherals"
 echo "------------------------"
 echo -e "${gl_kjlan}Station B:${gl_bai}https://b23.tv/2mqnQyh              ${gl_kjlan}Oil pipe:${gl_bai}https://www.youtube.com/@WuYouLab${gl_bai}"
 echo -e "${gl_kjlan}Official website:${gl_bai}https://wuyoulab.sh/              ${gl_kjlan}navigation:${gl_bai}https://dh.wuyoulab.sh/${gl_bai}"
@@ -21870,7 +21870,7 @@ cat <<'WUYOULAB_ASCII'
    \ V  V /| |_| |   | | (_) | |_| || |__| (_| | |_) |
     \_/\_/  \__,_|   |_|\___/ \__,_||_____\__,_|_.__/
 WUYOULAB_ASCII
-echo -e "Technology lion script toolbox v$sh_v"
+echo -e "WuYouLab script toolbox v$sh_v"
 echo -e "Command line input${gl_huang}k${gl_kjlan}Quick start script${gl_bai}"
 echo -e "${gl_kjlan}------------------------${gl_bai}"
 echo -e "${gl_kjlan}1.   ${gl_bai}System information query"

@@ -1,5 +1,5 @@
 #!/bin/bash
-sh_v="3.9.3"
+sh_v="4.5.0"
 
 
 gl_hui='\e[37m'
@@ -114,7 +114,7 @@ CheckFirstRun_false() {
 # Позвольте пользователю согласиться с условиями
 UserLicenseAgreement() {
 	clear
-	echo -e "${gl_kjlan}Добро пожаловать в The Tech Lion Script Toolbox${gl_bai}"
+	echo -e "${gl_kjlan}Добро пожаловать в The WuYouLab Script Toolbox${gl_bai}"
 	echo "Впервые используя сценарий, пожалуйста, прочитайте и согласитесь с пользовательским лицензионным соглашением."
 	echo "Пользовательский лицензионный соглашение: https://blog.wuyoulab.sh/user-license-agreement/"
 	echo -e "----------------------"
@@ -11208,7 +11208,7 @@ EOF
 		  41)
 			clear
 			send_stats "Доска объявлений"
-			echo "Доска объявлений Technology Lion была перенесена в официальное сообщество! Пожалуйста, оставьте сообщение в официальном сообществе!"
+			echo "Доска объявлений WuYouLab была перенесена в официальное сообщество! Пожалуйста, оставьте сообщение в официальном сообществе!"
 			echo "https://bbs.wuyoulab.sh/"
 			  ;;
 
@@ -11364,7 +11364,7 @@ EOF
 			  send_stats "Сценарий удаления технического льва"
 			  echo "Сценарий удаления технического льва"
 			  echo "------------------------------------------------"
-			  echo "Полностью удалит сценарий Kejilion и не повлияет на ваши другие функции"
+			  echo "Полностью удалит сценарий WuYouLab и не повлияет на ваши другие функции"
 			  read -e -p "Вы обязательно продолжите? (Y/N):" choice
 
 			  case "$choice" in
@@ -11673,7 +11673,7 @@ while true; do
 	  echo -e "${gl_kjlan}4.  ${gl_bai}Резервный кластер${gl_kjlan}5.  ${gl_bai}Восстановите кластер"
 	  echo -e "${gl_kjlan}------------------------${gl_bai}"
 	  echo -e "${gl_kjlan}Выполнять задачи партиями${gl_bai}"
-	  echo -e "${gl_kjlan}11. ${gl_bai}Установите сценарий Tech Lion${gl_kjlan}12. ${gl_bai}Обновите систему${gl_kjlan}13. ${gl_bai}Очистить систему"
+	  echo -e "${gl_kjlan}11. ${gl_bai}Установите сценарий WuYouLab${gl_kjlan}12. ${gl_bai}Обновите систему${gl_kjlan}13. ${gl_bai}Очистить систему"
 	  echo -e "${gl_kjlan}14. ${gl_bai}Установите Docker${gl_kjlan}15. ${gl_bai}Установите BBR3${gl_kjlan}16. ${gl_bai}Настройка 1G виртуальная память"
 	  echo -e "${gl_kjlan}17. ${gl_bai}Установите часовой пояс в Шанхай${gl_kjlan}18. ${gl_bai}Откройте все порты${gl_kjlan}51. ${gl_bai}Пользовательские команды"
 	  echo -e "${gl_kjlan}------------------------${gl_bai}"
@@ -11920,7 +11920,7 @@ cat <<'WUYOULAB_ASCII'
    \ V  V /| |_| |   | | (_) | |_| || |__| (_| | |_) |
     \_/\_/  \__,_|   |_|\___/ \__,_||_____\__,_|_.__/
 WUYOULAB_ASCII
-echo -e "Technology Lion Script Toolbox V$sh_v"
+echo -e "WuYouLab script toolbox V$sh_v"
 echo -e "Ввод командной строки${gl_huang}k${gl_kjlan}Быстро запустить сценарии${gl_bai}"
 echo -e "${gl_kjlan}------------------------${gl_bai}"
 echo -e "${gl_kjlan}1.   ${gl_bai}Информационный запрос системы"
