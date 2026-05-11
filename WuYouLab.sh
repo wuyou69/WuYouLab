@@ -34,6 +34,29 @@ gh_https_url="https://"
 }
 quanju_canshu
 
+redirect_language_script() {
+	case "$1" in
+		cn|en|tw|jp|kr|ru|ir)
+			local lang="$1"
+			shift
+			local tmp_file
+			tmp_file=$(mktemp /tmp/WuYouLab_${lang}.XXXXXX.sh)
+			local script_url="${gh_proxy}raw.githubusercontent.com/wuyou69/WuYouLab/main/${lang}/WuYouLab.sh"
+			if curl -fsSL --max-time 60 -o "$tmp_file" "$script_url" && [ -s "$tmp_file" ]; then
+				chmod +x "$tmp_file"
+				bash "$tmp_file" "$@"
+				local status=$?
+				rm -f "$tmp_file"
+				exit "$status"
+			fi
+			rm -f "$tmp_file"
+			echo -e "${gl_hong}语言版本下载失败，请检查网络连接: ${script_url}${gl_bai}"
+			exit 1
+			;;
+	esac
+}
+redirect_language_script "$@"
+
 
 
 # 定义一个函数来执行命令
