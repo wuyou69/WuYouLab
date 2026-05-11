@@ -1,6 +1,6 @@
 <br><br><br>
 <div align="center">
-<img src="assets/wuyoulab-logo.png" alt="логотип" width="650">
+<img src="assets/wuyoulab-title.png" alt="логотип" width="650">
 </div>
 
 <div align="center" style="margin-top:-200px;">
@@ -90,7 +90,7 @@ bash <(curl -sL sh.wuyou69.top) ru
 <br><br>
 
 ## 🖼️ Предпросмотр интерфейса
-<img src="assets/wuyoulab-logo.png" alt="Предпросмотр русской версии" width="75%"/>
+<img src="assets/wuyoulab-preview-en.jpg" alt="Предпросмотр русской версии" width="75%"/>
 
 
 

@@ -1,6 +1,6 @@
 <br><br><br>
 <div align="center">
-  <img src="assets/wuyoulab-logo.png" alt="logo" width="650">
+  <img src="assets/wuyoulab-title.png" alt="logo" width="650">
 </div>
 
 <div align="center" style="margin-top:-200px;">
@@ -98,8 +98,8 @@ bash <(curl -sL sh.wuyou69.top) en
 
 ## 🖼️ 效果图预览 (Preview)
 <p>
-  <img src="assets/wuyoulab-logo.png" alt="中文版" width="48%" style="display:inline-block; margin-right:10px;"/>
-  <img src="assets/wuyoulab-logo.png" alt="English Version" width="48%" style="display:inline-block;"/>
+  <img src="assets/wuyoulab-preview-cn.jpg" alt="中文版" width="48%" style="display:inline-block; margin-right:10px;"/>
+  <img src="assets/wuyoulab-preview-en.jpg" alt="English Version" width="48%" style="display:inline-block;"/>
 </p>
 
 

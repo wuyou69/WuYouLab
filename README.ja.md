@@ -27,7 +27,7 @@ bash <(curl -sL sh.wuyou69.top) jp
 ***
 ## 🖼️ 実際のスクリーンショット
 
-<img src="assets/wuyoulab-logo.png" alt="日本語版プレビュー" width="75%"/>
+<img src="assets/wuyoulab-preview-en.jpg" alt="日本語版プレビュー" width="75%"/>
 
 
 ***

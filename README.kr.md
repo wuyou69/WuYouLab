@@ -28,7 +28,7 @@ bash <(curl -sL sh.wuyou69.top) kr
 
 ## 🖼️ 실제 화면 미리보기 (Preview)
 
-<img src="assets/wuyoulab-logo.png" alt="한국어 버전 미리보기" width="75%"/>
+<img src="assets/wuyoulab-preview-en.jpg" alt="한국어 버전 미리보기" width="75%"/>
 
 
 
