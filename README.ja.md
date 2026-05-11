@@ -21,7 +21,7 @@ TechLion のシェル スクリプト ツールは、Linux の監視、テスト
 
 ## 🚀 ワンクリックインストール
 ```bash
-bash <(curl -sL https://raw.githubusercontent.com/wuyou69/WuYouLab/main/WuYouLab.sh) jp
+bash <(curl -sL sh.wuyou69.top) jp
 ```
 
 ***

@@ -21863,9 +21863,13 @@ WuYouLab_sh() {
 while true; do
 clear
 echo -e "${gl_kjlan}"
-echo "╦╔═╔═╗ ╦╦╦  ╦╔═╗╔╗╔ ╔═╗╦ ╦"
-echo "╠╩╗║╣  ║║║  ║║ ║║║║ ╚═╗╠═╣"
-echo "╩ ╩╚═╝╚╝╩╩═╝╩╚═╝╝╚╝o╚═╝╩ ╩"
+cat <<'WUYOULAB_ASCII'
+ __        __      __   __           _          _
+ \ \      / /   _  \ \ / /__  _   _ | |    __ _| |__
+  \ \ /\ / / | | |  \ V / _ \| | | || |   / _` | '_ \
+   \ V  V /| |_| |   | | (_) | |_| || |__| (_| | |_) |
+    \_/\_/  \__,_|   |_|\___/ \__,_||_____\__,_|_.__/
+WUYOULAB_ASCII
 echo -e "Technology lion script toolbox v$sh_v"
 echo -e "Command line input${gl_huang}k${gl_kjlan}Quick start script${gl_bai}"
 echo -e "${gl_kjlan}------------------------${gl_bai}"

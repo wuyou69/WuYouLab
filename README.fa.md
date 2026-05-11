@@ -7,4 +7,4 @@
 ## 🚀 نصب با یک کلیک (One-Click Installation) FA
 
 ```bash
-bash <(curl -sL https://raw.githubusercontent.com/wuyou69/WuYouLab/main/WuYouLab.sh) ir
+bash <(curl -sL sh.wuyou69.top) ir

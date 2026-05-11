@@ -22,7 +22,7 @@ TechLion의 Shell Script Tool은 Linux 모니터링, 테스트, 관리를 위해
 
 ## 🚀 원클릭 설치
 ```bash
-bash <(curl -sL https://raw.githubusercontent.com/wuyou69/WuYouLab/main/WuYouLab.sh) kr
+bash <(curl -sL sh.wuyou69.top) kr
 ```
 ***
 

@@ -86,12 +86,12 @@ WuYouLab's Shell script tool is an all-in-one script toolbox designed for Linux 
 
 ## 🚀 一键安装 (One-Click Installation) CN
 ```bash
-bash <(curl -sL https://raw.githubusercontent.com/wuyou69/WuYouLab/main/WuYouLab.sh)
+bash <(curl -sL sh.wuyou69.top)
 ```
 
 ## 🚀 一键安装 (One-Click Installation) EN
 ```bash
-bash <(curl -sL https://raw.githubusercontent.com/wuyou69/WuYouLab/main/WuYouLab.sh) en
+bash <(curl -sL sh.wuyou69.top) en
 ```
 
 <br><br>

@@ -11884,9 +11884,13 @@ WuYouLab_sh() {
 while true; do
 clear
 echo -e "${gl_kjlan}"
-echo "╦╔═╔═╗ ╦╦╦  ╦╔═╗╔╗╔ ╔═╗╦ ╦"
-echo "╠╩╗║╣  ║║║  ║║ ║║║║ ╚═╗╠═╣"
-echo "╩ ╩╚═╝╚╝╩╩═╝╩╚═╝╝╚╝o╚═╝╩ ╩"
+cat <<'WUYOULAB_ASCII'
+ __        __      __   __           _          _
+ \ \      / /   _  \ \ / /__  _   _ | |    __ _| |__
+  \ \ /\ / / | | |  \ V / _ \| | | || |   / _` | '_ \
+   \ V  V /| |_| |   | | (_) | |_| || |__| (_| | |_) |
+    \_/\_/  \__,_|   |_|\___/ \__,_||_____\__,_|_.__/
+WUYOULAB_ASCII
 echo -e "جعبه ابزار Script Lion Technology V$sh_v"
 echo -e "ورودی خط فرمان${gl_huang}k${gl_kjlan}سریع اسکریپت ها را شروع کنید${gl_bai}"
 echo -e "${gl_kjlan}------------------------${gl_bai}"

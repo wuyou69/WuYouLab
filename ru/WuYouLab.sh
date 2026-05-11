@@ -11913,9 +11913,13 @@ WuYouLab_sh() {
 while true; do
 clear
 echo -e "${gl_kjlan}"
-echo "╦╔═╔═╗ ╦╦╦  ╦╔═╗╔╗╔ ╔═╗╦ ╦"
-echo "╠╩╗║╣  ║║║  ║║ ║║║║ ╚═╗╠═╣"
-echo "╩ ╩╚═╝╚╝╩╩═╝╩╚═╝╝╚╝o╚═╝╩ ╩"
+cat <<'WUYOULAB_ASCII'
+ __        __      __   __           _          _
+ \ \      / /   _  \ \ / /__  _   _ | |    __ _| |__
+  \ \ /\ / / | | |  \ V / _ \| | | || |   / _` | '_ \
+   \ V  V /| |_| |   | | (_) | |_| || |__| (_| | |_) |
+    \_/\_/  \__,_|   |_|\___/ \__,_||_____\__,_|_.__/
+WUYOULAB_ASCII
 echo -e "Technology Lion Script Toolbox V$sh_v"
 echo -e "Ввод командной строки${gl_huang}k${gl_kjlan}Быстро запустить сценарии${gl_bai}"
 echo -e "${gl_kjlan}------------------------${gl_bai}"

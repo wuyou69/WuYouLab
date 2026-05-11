@@ -20,7 +20,7 @@
 
 ## 🚀 一鍵安裝
 ```bash
-bash <(curl -sL https://raw.githubusercontent.com/wuyou69/WuYouLab/main/WuYouLab.sh) tw
+bash <(curl -sL sh.wuyou69.top) tw
 ```
 
 ***
